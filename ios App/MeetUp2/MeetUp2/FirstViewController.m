@@ -5,7 +5,7 @@
 //  Created by Kevin Frans on 9/6/14.
 //  Copyright (c) 2014 Kevin Frans. All rights reserved.
 //
-
+#import "Singleton.h"
 #import "FirstViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
@@ -22,6 +22,7 @@
 
 @implementation FirstViewController
 {
+    Singleton *singleton;
     CLLocationManager *locationManager;
 }
 
@@ -43,6 +44,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Init the Singleton
+    Singleton *singleton = [Singleton sharedInstance];
+    NSLog(@"%i",singleton.test);
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move

@@ -1,6 +1,6 @@
 //
 //  Singleton.m
-//  MeetUp
+//  MeetUp2
 //
 //  Created by Wilson Zhao on 9/6/14.
 //  Copyright (c) 2014 Kevin Frans. All rights reserved.
@@ -9,7 +9,6 @@
 #import "Singleton.h"
 
 @implementation Singleton
-
 + (Singleton *)sharedInstance
 {
     static Singleton *sharedInstance = nil;
@@ -20,5 +19,13 @@
     });
     return sharedInstance;
 }
+
+- (id) init {
+    if (self = [super init]) {
+        _test = 1;
+    }
+    return self;
+}
+
 
 @end
