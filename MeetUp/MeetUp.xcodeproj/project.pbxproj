@@ -15,7 +15,11 @@
 		0A8F1DE019BBB3E100362EC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F1DDF19BBB3E100362EC5 /* Images.xcassets */; };
 		0A8F1DEC19BBB3E100362EC5 /* MeetUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F1DEB19BBB3E100362EC5 /* MeetUpTests.m */; };
 		0A8F1DF619BBB71100362EC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8F1DF519BBB71100362EC5 /* MapKit.framework */; };
+<<<<<<< HEAD
 		0A8F1DF819BBBC7D00362EC5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8F1DF719BBBC7D00362EC5 /* CoreLocation.framework */; };
+=======
+		776AD7F319BBBC0B005FE64A /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 776AD7F219BBBC0B005FE64A /* Singleton.m */; };
+>>>>>>> FETCH_HEAD
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +48,12 @@
 		0A8F1DEA19BBB3E100362EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8F1DEB19BBB3E100362EC5 /* MeetUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetUpTests.m; sourceTree = "<group>"; };
 		0A8F1DF519BBB71100362EC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+<<<<<<< HEAD
 		0A8F1DF719BBBC7D00362EC5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+=======
+		776AD7F119BBBC0B005FE64A /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		776AD7F219BBBC0B005FE64A /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+>>>>>>> FETCH_HEAD
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +103,8 @@
 				0A8F1DD419BBB3E100362EC5 /* AppDelegate.m */,
 				0A8F1DD619BBB3E100362EC5 /* FirstViewController.h */,
 				0A8F1DD719BBB3E100362EC5 /* FirstViewController.m */,
+				776AD7F119BBBC0B005FE64A /* Singleton.h */,
+				776AD7F219BBBC0B005FE64A /* Singleton.m */,
 				0A8F1DD919BBB3E100362EC5 /* SecondViewController.h */,
 				0A8F1DDA19BBB3E100362EC5 /* SecondViewController.m */,
 				0A8F1DDC19BBB3E100362EC5 /* Main.storyboard */,
@@ -232,6 +243,7 @@
 				0A8F1DD519BBB3E100362EC5 /* AppDelegate.m in Sources */,
 				0A8F1DD819BBB3E100362EC5 /* FirstViewController.m in Sources */,
 				0A8F1DD219BBB3E100362EC5 /* main.m in Sources */,
+				776AD7F319BBBC0B005FE64A /* Singleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +432,7 @@
 				0A8F1DF119BBB3E100362EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A8F1DF219BBB3E100362EC5 /* Build configuration list for PBXNativeTarget "MeetUpTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +441,7 @@
 				0A8F1DF419BBB3E100362EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
