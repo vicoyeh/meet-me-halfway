@@ -32,11 +32,11 @@
 }
 
 
-- (int)deviceLocationLat {
+- (float)deviceLocationLat {
     return _map.userLocation.location.coordinate.latitude;
 }
 
-- (int)deviceLocationLong {
+- (float)deviceLocationLong {
     return _map.userLocation.location.coordinate.longitude;
 }
 
@@ -53,9 +53,20 @@
                    action:@selector(textFieldDidChange)
          forControlEvents:UIControlEventEditingChanged];
     
+    
+    [self performSelector:@selector(textFieldDidChange) withObject:nil afterDelay:2.0];
+
+    
 }
 
+
 -(void) textFieldDidChange
+{
+    [self changeMap];
+}
+
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     [self changeMap];
 }
