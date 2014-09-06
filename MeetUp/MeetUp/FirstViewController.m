@@ -39,7 +39,7 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     
     // 3
-    [_mapView setRegion:viewRegion animated:YES];
+    [_map setRegion:viewRegion animated:YES];
 }
 
 @end
