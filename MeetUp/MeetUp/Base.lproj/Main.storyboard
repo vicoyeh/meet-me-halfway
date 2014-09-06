@@ -64,6 +64,7 @@
                     <tabBarItem key="tabBarItem" title="Main" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="map" destination="iUj-eV-605" id="H6c-E9-d5f"/>
+                        <outlet property="textField" destination="diz-bv-Doh" id="1vu-XH-5SF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

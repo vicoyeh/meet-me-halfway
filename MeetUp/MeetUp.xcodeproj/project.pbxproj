@@ -15,6 +15,7 @@
 		0A8F1DE019BBB3E100362EC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F1DDF19BBB3E100362EC5 /* Images.xcassets */; };
 		0A8F1DEC19BBB3E100362EC5 /* MeetUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F1DEB19BBB3E100362EC5 /* MeetUpTests.m */; };
 		0A8F1DF619BBB71100362EC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8F1DF519BBB71100362EC5 /* MapKit.framework */; };
+		0A8F1DF819BBBC7D00362EC5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8F1DF719BBBC7D00362EC5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		0A8F1DEA19BBB3E100362EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8F1DEB19BBB3E100362EC5 /* MeetUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetUpTests.m; sourceTree = "<group>"; };
 		0A8F1DF519BBB71100362EC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0A8F1DF719BBBC7D00362EC5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8F1DF819BBBC7D00362EC5 /* CoreLocation.framework in Frameworks */,
 				0A8F1DF619BBB71100362EC5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +70,7 @@
 		0A8F1DC319BBB3E100362EC5 = {
 			isa = PBXGroup;
 			children = (
+				0A8F1DF719BBBC7D00362EC5 /* CoreLocation.framework */,
 				0A8F1DF519BBB71100362EC5 /* MapKit.framework */,
 				0A8F1DCE19BBB3E100362EC5 /* MeetUp */,
 				0A8F1DE819BBB3E100362EC5 /* MeetUpTests */,
