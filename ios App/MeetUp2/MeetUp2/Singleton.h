@@ -10,4 +10,7 @@
 
 @interface Singleton : NSObject
 
++ (Singleton *)sharedInstance;
+
+@property (nonatomic,readwrite) int test;
 @end

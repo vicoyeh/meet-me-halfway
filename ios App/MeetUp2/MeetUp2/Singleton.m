@@ -20,5 +20,12 @@
     return sharedInstance;
 }
 
+- (id) init {
+    if (self = [super init]) {
+        _test = 1;
+    }
+    return self;
+}
+
 
 @end
