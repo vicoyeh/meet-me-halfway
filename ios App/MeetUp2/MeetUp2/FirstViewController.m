@@ -63,6 +63,8 @@
 -(void) textFieldDidChange
 {
     [self changeMap];
+    
+    [self performSelector:@selector(textFieldDidChange) withObject:nil afterDelay:2.0];
 }
 
 
