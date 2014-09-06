@@ -16,7 +16,6 @@
 @interface FirstViewController ()
 
 @property (weak, nonatomic) IBOutlet MKMapView *map;
-
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
@@ -34,48 +33,52 @@
 
 
 - (int)deviceLocationLat {
-    return locationManager.location.coordinate.latitude;
+    return _map.userLocation.location.coordinate.latitude;
 }
 
 - (int)deviceLocationLong {
-    return locationManager.location.coordinate.longitude;
+    return _map.userLocation.location.coordinate.longitude;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
-    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest; // 100 m
     [locationManager startUpdatingLocation];
-
+    
     [_textField addTarget:self
-                  action:@selector(textFieldDidChange)
-        forControlEvents:UIControlEventEditingChanged];
-
+                   action:@selector(textFieldDidChange)
+         forControlEvents:UIControlEventEditingChanged];
+    
 }
 
 -(void) textFieldDidChange
 {
+    [self changeMap];
+}
+
+-(void) changeMap
+{
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = [self deviceLocationLat];
+    zoomLocation.longitude= [self deviceLocationLong];
+    
     NSLog(@"%d",[self deviceLocationLat]);
     NSLog(@"%d",[self deviceLocationLong]);
+    
+    // 2
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    
+    // 3
+    [_map setRegion:viewRegion animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     // 1
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = [self deviceLocationLat];
-    zoomLocation.longitude= [self deviceLocationLong];
-
-    NSLog(@"%d",[self deviceLocationLat]);
-    NSLog(@"%d",[self deviceLocationLong]);
-
-    // 2
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
-
-    // 3
-    [_map setRegion:viewRegion animated:YES];
+    [self changeMap];
 }
 
 @end
