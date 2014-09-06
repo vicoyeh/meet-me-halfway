@@ -420,6 +420,7 @@
 				0A1E368519BBC09500BBE257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A1E368619BBC09500BBE257 /* Build configuration list for PBXNativeTarget "MeetUp2Tests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +429,7 @@
 				0A1E368819BBC09500BBE257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

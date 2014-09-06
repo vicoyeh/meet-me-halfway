@@ -83,10 +83,47 @@
     NSLog(@"%d",[self deviceLocationLong]);
     
     // 2
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     
-    // 3
-    [_map setRegion:viewRegion animated:YES];
+    id userLocation = [_map userLocation];
+    NSMutableArray *pins = [[NSMutableArray alloc] initWithArray:[_map annotations]];
+    if ( userLocation != nil ) {
+        [pins removeObject:userLocation]; // avoid removing user location off the map
+    }
+    
+    [_map removeAnnotations:pins];
+    pins = nil;
+    
+    CLLocationCoordinate2D coord;
+    coord.latitude = 32;
+    coord.longitude = -122;
+    
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = _map.userLocation.location.coordinate;
+    point.title = @"Where am I?";
+    point.subtitle = @"I'm here!!!";
+    
+    [_map addAnnotation:point];
+    
+    
+    
+    
+    
+    
+    
+    MKMapRect zoomRect = MKMapRectNull;
+    for (id <MKAnnotation> annotation in _map.annotations)
+    {
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
+        zoomRect = MKMapRectUnion(zoomRect, pointRect);
+    }
+    
+    MKMapPoint annotationPoint = MKMapPointForCoordinate(_map.userLocation.location.coordinate);
+    MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
+    zoomRect = MKMapRectUnion(zoomRect, pointRect);
+    
+    
+    [_map setVisibleMapRect:zoomRect animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
