@@ -16,7 +16,6 @@
 		0A1E368019BBC09500BBE257 /* MeetUp2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E367F19BBC09500BBE257 /* MeetUp2Tests.m */; };
 		0A1E368A19BBC11000BBE257 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1E368919BBC11000BBE257 /* CoreLocation.framework */; };
 		0A1E368C19BBC11300BBE257 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1E368B19BBC11300BBE257 /* MapKit.framework */; };
-		77F9D2CB19BBC32000066F7A /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9D2CA19BBC32000066F7A /* Singleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +45,6 @@
 		0A1E367F19BBC09500BBE257 /* MeetUp2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetUp2Tests.m; sourceTree = "<group>"; };
 		0A1E368919BBC11000BBE257 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0A1E368B19BBC11300BBE257 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		77F9D2C919BBC32000066F7A /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		77F9D2CA19BBC32000066F7A /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +96,6 @@
 				0A1E366B19BBC09500BBE257 /* FirstViewController.m */,
 				0A1E366D19BBC09500BBE257 /* SecondViewController.h */,
 				0A1E366E19BBC09500BBE257 /* SecondViewController.m */,
-				77F9D2C919BBC32000066F7A /* Singleton.h */,
-				77F9D2CA19BBC32000066F7A /* Singleton.m */,
 				0A1E367019BBC09500BBE257 /* Main.storyboard */,
 				0A1E367319BBC09500BBE257 /* Images.xcassets */,
 				0A1E366319BBC09500BBE257 /* Supporting Files */,
@@ -237,7 +232,6 @@
 				0A1E366919BBC09500BBE257 /* AppDelegate.m in Sources */,
 				0A1E366C19BBC09500BBE257 /* FirstViewController.m in Sources */,
 				0A1E366619BBC09500BBE257 /* main.m in Sources */,
-				77F9D2CB19BBC32000066F7A /* Singleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +378,6 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MeetUp2Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -401,7 +394,6 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MeetUp2Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,7 +420,6 @@
 				0A1E368519BBC09500BBE257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		0A1E368619BBC09500BBE257 /* Build configuration list for PBXNativeTarget "MeetUp2Tests" */ = {
 			isa = XCConfigurationList;
@@ -437,7 +428,6 @@
 				0A1E368819BBC09500BBE257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,6 +1,6 @@
 //
-//  MeetUp2Tests.m
-//  MeetUp2Tests
+//  MeetUpTests.m
+//  MeetUpTests
 //
 //  Created by Kevin Frans on 9/6/14.
 //  Copyright (c) 2014 Kevin Frans. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface MeetUp2Tests : XCTestCase
+@interface MeetUpTests : XCTestCase
 
 @end
 
-@implementation MeetUp2Tests
+@implementation MeetUpTests
 
 - (void)setUp {
     [super setUp];
