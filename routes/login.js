@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var dbConfig = require('../db');
-// var mongoose;
-
+var mongoose = require('mongoose');
 var User = require('../models/user.js');
 
 
@@ -26,6 +25,12 @@ router.post('/', function(req, res) {
 
         // // Connect to DB
         mongoose.connect(dbConfig.url);
+
+        var db = mongoose.connection;
+
+		db.once('open', function callback () {
+		  console.log("connected to database");
+		});
 
         console.log("hereddd");
 
