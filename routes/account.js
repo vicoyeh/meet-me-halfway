@@ -22,9 +22,9 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
   // var appleid = data.appleid;
   // var username = data.username;
 
-    var options = {cert:__dirname + '/cert.pem',key:__dirname+'/key.pem' };
+    var options = {cert:__dirname + '/cert.pem',key:__dirname+'/key.pem',gateway:'gateway.sandbox.push.apple.com' };
 console.log("hi2");
-    var apnConnection = new apn.connection({ gateway:'gateway.sandbox.push.apple.com' });
+    var apnConnection = new apn.connection(options);
     console.log("hi2.5");
 var myDevice = new apn.Device("<30829bc2 34cfc1ec e6f6ad33 70dee3b6 b00e8b2c a41ca1ca a32cb10b ad7ba6dc>");
 console.log("hi3");
