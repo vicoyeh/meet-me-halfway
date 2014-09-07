@@ -1,11 +1,12 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var router = express.Router();
 
 var map_model = require('../models/maps')();
 
 
 
-router.post('/', express.bodyParser(), function(req, res) {
+router.post('/', bodyParser.json(), function(req, res) {
 	res.set('Content-Type','application/json');
 	console.log("Received req")
 	// console.log(req.body.toString());
