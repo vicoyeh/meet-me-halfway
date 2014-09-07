@@ -7,12 +7,11 @@ var map_model = require('../models/maps')();
 
 router.post('/', function(req, res) {
 	console.log("Received req")
-	console.log(req.body);
+	console.log(req.body.toString());
   	var user = JSON.parse(req.body.user);
   	var friend = JSON.parse(req.body.friend);
-  	console.log(user.toString());
-  	console.log(user.longitude);
-  	console.log(req.body.user);
+
+  	console.log(user);
   	console.log(friend);
 
   	//var user = {"latitude":35.7749290,"longitude":-118.4194160};
