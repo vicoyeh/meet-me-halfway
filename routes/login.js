@@ -6,9 +6,7 @@ var mongoose;
 
 var User = require('../models/user.js');
 
-module.exports.setMongoose = function(m){
-	mongoose = m;
-};
+
 
 /* GET home page. */
 router.post('/', function(req, res) {
@@ -43,5 +41,9 @@ router.post('/', function(req, res) {
         });  
 
 });
+
+module.exports.setMongoose = function(m){
+	mongoose = m;
+};
 
 module.exports = router;
