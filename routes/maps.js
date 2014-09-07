@@ -11,7 +11,8 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
 	console.log("Received req")
 	// console.log(req.body.toString());
 
-	var data = JSON.parse(req.body)
+	console.log(req.body);
+	var data = JSON.parse(req.body);
 
 	// var str = JSON.stringify(req.body);
 	// str = str.slice(1,str.length-4);
