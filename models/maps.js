@@ -38,6 +38,8 @@ var model = function() {
 				}
 			});
 
+			console.log(restaurants);
+			console.log(restaurants.toString());
 			return restaurants;
 		}
 	}
