@@ -36,7 +36,7 @@ var model = function() {
 
 						var restaurant = {};
 
-						if (data.businesses[i].location==null) {
+						if (data.businesses[i].location.latitude==0) {
 							continue;
 						}
 
