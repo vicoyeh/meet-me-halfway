@@ -11,7 +11,7 @@ router.post('/', function(req, res) {
 	// console.log(req.body.toString());
 
 	var data = JSON.stringify(req.body)
-	data = data.slice(4,data.length-7);
+	data = data.slice(3,data.length-5);
 	console.log(data);
 
   	var user = req.body.user;
