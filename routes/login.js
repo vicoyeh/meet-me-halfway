@@ -20,27 +20,27 @@ router.post('/', function(req, res) {
         var usrappleid = data.appleid;
 
 
-        // // Connect to DB
-  //       mongoose.connect(dbConfig.url);
+        // Connect to DB
+        mongoose.connect(dbConfig.url);
 
-  // 		//var db = mongoose.connection;
+  		//var db = mongoose.connection;
 
-		// // db.once('open', function callback () {
-		// //   console.log("connected to database");
-		// // });
+		// db.once('open', function callback () {
+		//   console.log("connected to database");
+		// });
 
-  //       console.log("hereddd");
+        console.log("hereddd");
 
-  //       User.find({fbid:userid}, function(err,data) {
-  //       	console.log("here");
-  //           if (err)
-  //             return console.error(err);
-  //           if (!data) {
-  //           	console.log("here");
-  //           	var newuser = new User({name:usrname,fbid:usrfbid,appleid:usrappleid});
-  //           	newuser.save();
-  //           }
-  //       });  
+        User.find({fbid:userid}, function(err,data) {
+        	console.log("here");
+            if (err)
+              return console.error(err);
+            if (!data) {
+            	console.log("here");
+            	var newuser = new User({name:usrname,fbid:usrfbid,appleid:usrappleid});
+            	newuser.save();
+            }
+        });  
 
 });
 

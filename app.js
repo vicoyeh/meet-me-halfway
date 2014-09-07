@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
 //var users = require('./routes/users');
 var maps = require('./routes/maps');
 var account = require('./routes/account');
-var login = require('./routes/login');
+//var login = require('./routes/login');
 
 
 //db setup #################################
@@ -41,6 +41,45 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 
+app.post('/', function(req, res) {
+
+        console.log("Received req: login");
+        // //parse req object
+        var arr = Object.keys(req.body);
+        var str = arr[0];
+        console.log(str);
+        var data = JSON.parse(str);
+        console.log(data);
+        var usrname = data.name;
+        var usrfbid = data.fbid;
+        var usrappleid = data.appleid;
+
+
+        // Connect to DB
+        mongoose.connect(dbConfig.url);
+
+        //var db = mongoose.connection;
+
+        // db.once('open', function callback () {
+        //   console.log("connected to database");
+        // });
+
+        console.log("hereddd");
+
+        User.find({fbid:userid}, function(err,data) {
+            console.log("here");
+            if (err)
+              return console.error(err);
+            if (!data) {
+                console.log("here");
+                var newuser = new User({name:usrname,fbid:usrfbid,appleid:usrappleid});
+                newuser.save();
+            }
+        });  
+
+});
+
+
 
 //app use #################################
 // uncomment after placing your favicon in /public
@@ -55,7 +94,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/users', users);
 app.use('/maps', maps);
 app.use('/request',account);
-app.use('/login',login);
+//app.use('/login',login);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
