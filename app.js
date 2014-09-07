@@ -11,6 +11,7 @@ var bodyParser = require('body-parser');
 //var users = require('./routes/users');
 var maps = require('./routes/maps');
 var account = require('./routes/account');
+var login = require('./routes/login');
 
 
 //db setup #################################
@@ -32,13 +33,6 @@ db.once('open', function callback () {
 //   console.log(kittens)
 // })
 
-var ethan = new User({name: 'Tom'});
-ethan.save();
-console.log(ethan.name);
-
-
-
-
 var app = express();
 
 // view engine setup
@@ -58,7 +52,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/', routes);
 //app.use('/users', users);
 app.use('/maps', maps);
-app.use('/account',account);
+app.use('/request',account);
+app.use('/login',login);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
