@@ -16,8 +16,8 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
 	str = str.slice(1,str.length-4);
 	console.log(str);
 	var data = JSON.parse(str);
-
-  	var user = data.user;
+	console.log(data);
+  	var user = data.user.toString();
   	var friend = data.friend;
 
   	console.log(user);
