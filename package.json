@@ -13,6 +13,8 @@
     "serve-favicon": "~2.0.1",
     "debug": "~1.0.4",
     "jade": "~1.5.0",
-    "yelp":"*"
+    "yelp":"*",
+    "apn":"*",
+    "mongoose": "~3.8.12"
   }
 }
