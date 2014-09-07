@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var dbConfig = require('../db');
-var mongoose;
+// var mongoose;
 
 var User = require('../models/user.js');
 
