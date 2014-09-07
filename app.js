@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 //var routes = require('./routes/index');
 //var users = require('./routes/users');
 var maps = require('./routes/maps');
+var account = require('./routes/account');
 
 
 //db setup #################################
@@ -54,6 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/', routes);
 //app.use('/users', users);
 app.use('/maps', maps);
+app.use('/account',account);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
