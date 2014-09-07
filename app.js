@@ -10,13 +10,14 @@ var bodyParser = require('body-parser');
 //var routes = require('./routes/index');
 //var users = require('./routes/users');
 var maps = require('./routes/maps');
-
+var account = require('./routes/account');
 
 
 //db setup #################################
 var dbConfig = require('./db');
 var mongoose = require('mongoose');
 var User = require('./models/user.js');
+
 // // Connect to DB
 mongoose.connect(dbConfig.url);
 
@@ -36,7 +37,7 @@ ethan.save();
 console.log(ethan.name);
 
 
-var account = require('./routes/account')(User);
+
 
 var app = express();
 
