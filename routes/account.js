@@ -25,7 +25,7 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
     var options = { };
 
     var apnConnection = new apn.Connection(options);
-var myDevice = new apn.Device("<30829bc2 34cfc1ec e6f6ad33 70dee3b6 b00e8b2c a41ca1ca a32cb10b ad7ba6dc>");
+var myDevice = new apn.Device("<30829bc234cfc1ece6f6ad3370dee3b6b00e8b2ca41ca1caa32cb10bad7ba6dc>");
 
 var note = new apn.Notification();
 
@@ -35,8 +35,9 @@ note.sound = "ping.aiff";
 note.alert = "\uD83D\uDCE7 \u2709 You have a new message";
 note.payload = {'messageFrom': 'Caroline'};
 
-apnConnection.pushNotification(note, myDevice);
 
+apnConnection.pushNotification(note, myDevice);
+console.log("hi");
   //pushNotification.pushTo("<30829bc2 34cfc1ec e6f6ad33 70dee3b6 b00e8b2c a41ca1ca a32cb10b ad7ba6dc>","John");
 });
 
