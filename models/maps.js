@@ -33,18 +33,21 @@ var model = function() {
 			  	if (data) {
 					//console.log(data);
 					for (var i = 0 ; i < data.businesses.length; i ++) {
-						console.log(data.businesses[i].name);
-						restaurants.push(data.businesses[i].name);
+						var restaurant = {};
+						// console.log(data.businesses[i].name);
+						restaurant.name = data.businesses[i].name;
+						restaurant.rating = data.businesses[i].rating;
+						restaurant.location = data.businesses[i].location;
+						restaurant.rating_image_url = data.businesses[i].rating_img_url;
+						restaurant.snippet_text = data.businesses[i].snippet_text;
+						restaurant.mobile_url = data.businesses[i].mobile_url;
+						restaurants.push(restaurant);
+
 					}
 					
 					callback(restaurants);
-
 				}
 			});
-
-			// console.log(restaurants);
-			// console.log(restaurants.toString());
-			// return restaurants;
 		}
 	}
 }

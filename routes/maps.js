@@ -29,8 +29,6 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
 
 
   	map_model.giveRestaurants(user,friend,function(restaurants){
-  		  	console.log(restaurants[0]);
-			console.log(restaurants.toString());
 		  	res.send(restaurants);
   	});
 
