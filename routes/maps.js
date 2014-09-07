@@ -17,11 +17,9 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
 	console.log(str);
 	var data = JSON.parse(str);
 	console.log(data);
-  	var user = data.user.toString();
-  	var friend = data.friend;
 
-  	console.log(user);
-  	console.log(friend);
+  	console.log(data.user);
+  	console.log(data.friend);
 
   	//var user = {"latitude":35.7749290,"longitude":-118.4194160};
   	//var friend = {"latitude":39.7749290,"longitude":-126.4194160};
