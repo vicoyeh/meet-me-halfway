@@ -12,9 +12,11 @@ var model = function() {
 
 	var restaurants=[];
 
+
+
 	return  {
 
-		giveRestaurants : function(user,friend) {
+		giveRestaurants : function(user,friend,callback) {
 			var dx = friend.longitude-user.longitude;
 			var dy = friend.latitude-user.latitude;
 			var distance = Math.sqrt(Math.pow(dx,2)+Math.pow(dy,2));
@@ -35,12 +37,14 @@ var model = function() {
 						restaurants.push(data.businesses[i].name);
 					}
 					
+					callback(restaurants);
+
 				}
 			});
 
-			console.log(restaurants);
-			console.log(restaurants.toString());
-			return restaurants;
+			// console.log(restaurants);
+			// console.log(restaurants.toString());
+			// return restaurants;
 		}
 	}
 }

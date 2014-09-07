@@ -26,11 +26,14 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
   	//var user = {"latitude":35.7749290,"longitude":-118.4194160};
   	//var friend = {"latitude":39.7749290,"longitude":-126.4194160};
 
-  	var restaurants = map_model.giveRestaurants(user,friend);
-  	console.log(restaurants[0]);
-	console.log(restaurants.toString());
 
-  	res.send(restaurants);
+
+  	map_model.giveRestaurants(user,friend,function(restaurants){
+  		  	console.log(restaurants[0]);
+			console.log(restaurants.toString());
+		  	res.send(restaurants);
+  	});
+
   	//res.send(restaurants.toString());
 });
 
