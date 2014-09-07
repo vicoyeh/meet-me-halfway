@@ -10,7 +10,9 @@ router.post('/', function(req, res) {
 
   	var user = JSON.parse(req.body.user);
   	var friend = JSON.parse(req.body.friend);
-  	console.log(user);
+  	console.log(user.toString());
+  	console.log(user.longitude);
+  	console.log(req.body.user);
   	console.log(friend);
 
   	//var user = {"latitude":35.7749290,"longitude":-118.4194160};
