@@ -22,11 +22,11 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
   	var user = data.user;
   	var friend = data.friend;
 
+  	var restaurants = [];
+
   	//test data
   	//var user = {"latitude":35.7749290,"longitude":-118.4194160};
   	//var friend = {"latitude":39.7749290,"longitude":-126.4194160};
-
-
 
   	map_model.giveRestaurants(user,friend,function(restaurants){
 		  	res.send(restaurants);
