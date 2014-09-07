@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+var dbConfig = require('../db');
+var mongoose = require('mongoose');
+var User = require('../models/user.js');
+
 /* GET home page. */
 router.post('/', function(req, res) {
 
@@ -15,17 +19,17 @@ router.post('/', function(req, res) {
         var usrfbid = data.fbid;
         var usrappleid = data.appleid;
 
-	    var dbConfig = require('../db');
-        var mongoose = require('mongoose');
-        var User = require('../models/user.js');
+
 
         // // Connect to DB
         mongoose.connect(dbConfig.url);
 
         User.find({fbid:userid}, function(err,data) {
+        	console.log("here");
             if (err)
               return console.error(err);
             if (!data) {
+            	console.log("here");
             	var newuser = new User({name:usrname,fbid:usrfbid,appleid:usrappleid});
             	newuser.save();
             }
