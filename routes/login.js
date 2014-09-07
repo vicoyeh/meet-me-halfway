@@ -47,8 +47,5 @@ router.post('/', function(req, res) {
 
 });
 
-module.exports.setMongoose = function(m){
-	mongoose = m;
-};
 
 module.exports = router;
