@@ -1,6 +1,5 @@
 var apn = require('apn');
 
-
 var model = function() {
 
 	return  {
