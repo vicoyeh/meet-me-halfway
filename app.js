@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 //var routes = require('./routes/index');
 //var users = require('./routes/users');
 var maps = require('./routes/maps');
-var account = require('./routes/account');
+
 
 
 //db setup #################################
@@ -31,10 +31,12 @@ db.once('open', function callback () {
 //   console.log(kittens)
 // })
 
-var ethan = new User({name: 'Ethan'});
+var ethan = new User({name: 'Tom'});
+ethan.save();
 console.log(ethan.name);
 
 
+var account = require('./routes/account')(User);
 
 var app = express();
 
