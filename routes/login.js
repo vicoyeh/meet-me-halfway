@@ -6,8 +6,6 @@ var mongoose = require('mongoose');
 var User = require('../models/user.js');
 
 
-
-/* GET home page. */
 router.post('/', function(req, res) {
 
  		console.log("Received req: login");
@@ -23,26 +21,26 @@ router.post('/', function(req, res) {
 
 
         // // Connect to DB
-        mongoose.connect(dbConfig.url);
+  //       mongoose.connect(dbConfig.url);
 
-  //       var db = mongoose.connection;
+  // 		//var db = mongoose.connection;
 
-		// db.once('open', function callback () {
-		//   console.log("connected to database");
-		// });
+		// // db.once('open', function callback () {
+		// //   console.log("connected to database");
+		// // });
 
-        console.log("hereddd");
+  //       console.log("hereddd");
 
-        User.find({fbid:userid}, function(err,data) {
-        	console.log("here");
-            if (err)
-              return console.error(err);
-            if (!data) {
-            	console.log("here");
-            	var newuser = new User({name:usrname,fbid:usrfbid,appleid:usrappleid});
-            	newuser.save();
-            }
-        });  
+  //       User.find({fbid:userid}, function(err,data) {
+  //       	console.log("here");
+  //           if (err)
+  //             return console.error(err);
+  //           if (!data) {
+  //           	console.log("here");
+  //           	var newuser = new User({name:usrname,fbid:usrfbid,appleid:usrappleid});
+  //           	newuser.save();
+  //           }
+  //       });  
 
 });
 
