@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var router = express.Router();
 var pushNotification = require('../models/push');
 
-
+var apn = require('apn');
 
 
 router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res) {
