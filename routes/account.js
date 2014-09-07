@@ -22,7 +22,7 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
   // var appleid = data.appleid;
   // var username = data.username;
 
-    var options = { };
+    var options = {cert:__dirname + '/cert.pem',key:__dirname+'/key.pem' };
 console.log("hi2");
     var apnConnection = new apn.connection({ gateway:'gateway.sandbox.push.apple.com' });
     console.log("hi2.5");
