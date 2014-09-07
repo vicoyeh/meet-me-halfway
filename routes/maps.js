@@ -11,11 +11,12 @@ router.post('/', function(req, res) {
 	// console.log(req.body.toString());
 
 	var data = JSON.stringify(req.body)
-	data = data.slice(3,data.length-5);
+	data = data.slice(2,data.length-4);
 	console.log(data);
+	data = JSON.parse(data);
 
-  	var user = req.body.user;
-  	var friend = req.body.friend;
+  	var user = data.user;
+  	var friend = data.friend;
 
   	console.log(user);
   	console.log(friend);
