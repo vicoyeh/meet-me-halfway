@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Kevin Frans. All rights reserved.
 //
 
+#import "Singleton.h"
+
 #import "FirstViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
@@ -43,8 +45,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    locationManager = [[CLLocationManager alloc] init];
+        locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyBest; // 100 m
     [locationManager startUpdatingLocation];

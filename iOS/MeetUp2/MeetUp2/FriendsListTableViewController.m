@@ -5,7 +5,7 @@
 //  Created by Ethan Yu on 9/6/14.
 //  Copyright (c) 2014 Kevin Frans. All rights reserved.
 //
-
+#import "Singleton.h"
 #import "FriendsListTableViewController.h"
 
 @interface FriendsListTableViewController ()
@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    Singleton *singleton = [Singleton sharedInstance];
+    [singleton postData];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
