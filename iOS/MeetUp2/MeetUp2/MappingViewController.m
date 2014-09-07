@@ -69,14 +69,35 @@
     zoomLocation.latitude = [self deviceLocationLat];
     zoomLocation.longitude= [self deviceLocationLong];
     
-    NSLog(@"%d",[self deviceLocationLat]);
-    NSLog(@"%d",[self deviceLocationLong]);
+    [_map removeAnnotations:_map.annotations];
+    
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = _map.userLocation.location.coordinate;
+    point.title = @"Where am I?";
+    point.subtitle = @"I'm here!!!";
+    
+    [_map addAnnotation:point];
+    
+    NSLog(@"%f",[self deviceLocationLat]);
+    NSLog(@"%f",[self deviceLocationLong]);
+    
+    
+    MKMapPoint annotationPoint = MKMapPointForCoordinate(_map.userLocation.location.coordinate);
+    MKMapRect zoomRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
+    
+    for (id <MKAnnotation> annotation in _map.annotations)
+    {
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
+        zoomRect = MKMapRectUnion(zoomRect, pointRect);
+    }
+    [_map setVisibleMapRect:zoomRect animated:YES];
     
     // 2
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+//    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     
     // 3
-    [_map setRegion:viewRegion animated:YES];
+//    [_map setRegion:viewRegion animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
