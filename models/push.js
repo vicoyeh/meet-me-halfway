@@ -2,7 +2,7 @@ var apn = require('apn');
 
 //setup
 var options = { };
-var apnConnection = new apn.Connection(options);
+var apnConnection = new apn.Connection({ gateway:'gateway.sandbox.push.apple.com' });
 
 
 
