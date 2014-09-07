@@ -18,7 +18,6 @@
 		0A1E368C19BBC11300BBE257 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1E368B19BBC11300BBE257 /* MapKit.framework */; };
 		9F5B7DD319BBCE4000DFEBE2 /* FriendsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7DD219BBCE4000DFEBE2 /* FriendsListTableViewController.m */; };
 		9F5B7DD619BBCE8500DFEBE2 /* MappingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7DD519BBCE8500DFEBE2 /* MappingViewController.m */; };
-		9F5B7DDA19BBD3E400DFEBE2 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7DD919BBD3E400DFEBE2 /* Singleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +51,6 @@
 		9F5B7DD219BBCE4000DFEBE2 /* FriendsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableViewController.m; sourceTree = "<group>"; };
 		9F5B7DD419BBCE8500DFEBE2 /* MappingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingViewController.h; sourceTree = "<group>"; };
 		9F5B7DD519BBCE8500DFEBE2 /* MappingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingViewController.m; sourceTree = "<group>"; };
-		9F5B7DD819BBD3E400DFEBE2 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		9F5B7DD919BBD3E400DFEBE2 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +96,6 @@
 		0A1E366219BBC09500BBE257 /* MeetUp2 */ = {
 			isa = PBXGroup;
 			children = (
-				9F5B7DD819BBD3E400DFEBE2 /* Singleton.h */,
-				9F5B7DD919BBD3E400DFEBE2 /* Singleton.m */,
 				9F5B7DCD19BBCDF800DFEBE2 /* Users */,
 				9F5B7DD019BBCE1300DFEBE2 /* Networking */,
 				9F5B7DCF19BBCE0800DFEBE2 /* Mapping */,
@@ -279,7 +274,6 @@
 				0A1E366919BBC09500BBE257 /* AppDelegate.m in Sources */,
 				9F5B7DD319BBCE4000DFEBE2 /* FriendsListTableViewController.m in Sources */,
 				9F5B7DD619BBCE8500DFEBE2 /* MappingViewController.m in Sources */,
-				9F5B7DDA19BBD3E400DFEBE2 /* Singleton.m in Sources */,
 				0A1E366C19BBC09500BBE257 /* FirstViewController.m in Sources */,
 				0A1E366619BBC09500BBE257 /* main.m in Sources */,
 			);
