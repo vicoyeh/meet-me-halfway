@@ -33,15 +33,16 @@ router.post('/', function(req, res) {
   	console.log(user);
   	console.log(friend);
 
+    console.log("reality check zac");
 
   	//var user = {"latitude":35.7749290,"longitude":-118.4194160};
   	//var friend = {"latitude":39.7749290,"longitude":-126.4194160};
 
   	var restaurants = map_model.giveRestaurants(user,friend);
 	
-  	var data="{\"name\":\"yo\"}";
+  	var data={name:"yo"};
   	res.set('Content-Type','application/json');
-  	res.send(data);
+  	res.send(JSON.stringify(data));
   	//res.send(restaurants.toString());
 });
 
