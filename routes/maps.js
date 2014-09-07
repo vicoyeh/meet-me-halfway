@@ -7,9 +7,9 @@ var map_model = require('../models/maps')();
 
 router.post('/', function(req, res) {
 	console.log("Received req")
-	console.log(req.body.toString());
-  	var user = JSON.parse(req.body.user);
-  	var friend = JSON.parse(req.body.friend);
+	console.log(req);
+  	var user = req.body.user;
+  	var friend = req.body.friend;
 
   	console.log(user);
   	console.log(friend);
