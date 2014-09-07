@@ -6,7 +6,7 @@ var map_model = require('../models/maps')();
 
 
 
-router.post('/',[express.urlencoded(), express.json()], function(req, res) {
+router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res) {
 	res.set('Content-Type','application/json');
 	console.log("Received req")
 	// console.log(req.body.toString());
