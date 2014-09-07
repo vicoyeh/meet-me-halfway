@@ -11,11 +11,11 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
 	console.log("Received req")
 	// console.log(req.body.toString());
 
-	var data = req.body;
+	var str = JSON.stringify(req.body));
 	console.log(data);
-	// str = data.slice(1,str.length-4);
-	// console.log(str);
-	// var data = JSON.parse(str);
+	str = data.slice(1,str.length-5);
+	console.log(str);
+	var data = JSON.parse(str);
 
   	var user = data.user;
   	var friend = data.friend;
