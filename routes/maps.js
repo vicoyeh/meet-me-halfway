@@ -12,6 +12,7 @@ router.post('/', bodyParser.json(), function(req, res) {
 	// console.log(req.body.toString());
 
 	var data = req.body;
+	console.log(data);
 	// str = data.slice(1,str.length-4);
 	// console.log(str);
 	// var data = JSON.parse(str);
