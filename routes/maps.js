@@ -6,7 +6,7 @@ var map_model = require('../models/maps')();
 
 
 router.post('/', function(req, res) {
-	data=JSON.parse(req.body);
+	var data=JSON.parse(req.body);
   	var user = data.user;
   	var friend = data.friend;
   	console.log(user);
@@ -17,9 +17,9 @@ router.post('/', function(req, res) {
 
   	//var restaurants = map_model.giveRestaurants(user,friend);
 	
-  	var data={name:"yo"};
+  	var output={name:"yo"};
   	res.set('Content-Type','application/json');
-  	res.send(JSON.stringify(data));
+  	res.send(JSON.stringify(output));
   	//res.send(restaurants.toString());
 });
 
