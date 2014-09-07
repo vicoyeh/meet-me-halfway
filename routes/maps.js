@@ -40,8 +40,8 @@ router.post('/', function(req, res) {
   	var restaurants = map_model.giveRestaurants(user,friend);
 	
 
-  	
-  	res.send(restaurants.toString());
+  	res.send("yo");
+  	//res.send(restaurants.toString());
 });
 
 module.exports = router;
