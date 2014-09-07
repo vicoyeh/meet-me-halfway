@@ -5,15 +5,15 @@ var map_model = require('../models/maps')();
 
 
 
-router.post('/', function(req, res) {
+router.post('/', express.bodyParser(), function(req, res) {
 	res.set('Content-Type','application/json');
 	console.log("Received req")
 	// console.log(req.body.toString());
 
-	var str = JSON.stringify(req.body)
-	str = data.slice(1,str.length-4);
-	console.log(str);
-	var data = JSON.parse(str);
+	var data = req.body;
+	// str = data.slice(1,str.length-4);
+	// console.log(str);
+	// var data = JSON.parse(str);
 
   	var user = data.user;
   	var friend = data.friend;
