@@ -22,15 +22,14 @@ router.post('/', function(req, res) {
         var usrappleid = data.appleid;
 
 
-
         // // Connect to DB
         mongoose.connect(dbConfig.url);
 
-        var db = mongoose.connection;
+  //       var db = mongoose.connection;
 
-		db.once('open', function callback () {
-		  console.log("connected to database");
-		});
+		// db.once('open', function callback () {
+		//   console.log("connected to database");
+		// });
 
         console.log("hereddd");
 
