@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res) {
   res.set('Content-Type','application/json');
-  console.log("Received req");
+  console.log("Received req: account");
   console.log(req.body);
 
   //parse req object
