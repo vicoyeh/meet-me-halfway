@@ -27,10 +27,9 @@ var model = function() {
 	          console.log("ERROR: " + err + " : " + nfn + " : " + dev);
 	            });
 
-	            
-	        console.log("hi3");
+	 
 	        var note = new apn.Notification();
-	        console.log("hi4");
+	        
 	        // note.expiry = Math.floor(Date.now() / 1000) + 3600; // Expires 1 hour from now.
 	        // note.badge = 3;
 	        // note.sound = "ping.aiff";
