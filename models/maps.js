@@ -36,13 +36,9 @@ var model = function() {
 
 						var restaurant = {};
 
-						console.log(data.businesses[i].location.toString());
-						//console.log(data.businesses[i].location.coordinate.latitude);
-
-						// if (data.businesses[i].location.coordinate.latitude==0) {
-						// 	continue;
-						// }
-						if (restaurants.length==5) {
+						//console.log(data.businesses[i].location.toString());
+						
+						if (restaurants.length==10) {
 							break;
 						}
 
