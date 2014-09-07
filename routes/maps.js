@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
   	var user = req.body.user;
   	var friend = req.body.friend;
   	console.log("got request");
-  	console.log(req);
+  	console.log(req.body);
   	console.log(user);
   	console.log(friend);
 
