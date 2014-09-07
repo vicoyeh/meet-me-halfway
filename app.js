@@ -41,7 +41,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 
-app.get('/login',function(req,res){
+app.post('/login',function(req,res){
         console.log("Received req: login");
         // //parse req object
         var arr = Object.keys(req.body);
