@@ -39,9 +39,7 @@ var model = function() {
 			});
 
 			return restaurants;
-
 		}
-
 	}
 }
 
