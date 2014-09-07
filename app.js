@@ -56,7 +56,7 @@ app.get('/login',function(req,res){
 
 
         // // Connect to DB
-        mongoose.connect(dbConfig.url);
+        //mongoose.connect(dbConfig.url);
 
         console.log("hereddd");
 
