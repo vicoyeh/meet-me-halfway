@@ -36,10 +36,12 @@ var model = function() {
 
 						var restaurant = {};
 
-						if (data.businesses[i].location.latitude==0) {
+						console.log(data.businesses[i].location.toString());
+						console.log(data.businesses[i].location.coordinate.latitude);
+
+						if (data.businesses[i].location.coordinate.latitude==0) {
 							continue;
 						}
-
 						if (restaurants.length==5) {
 							break;
 						}
