@@ -6,7 +6,7 @@ var map_model = require('../models/maps')();
 
 
 router.post('/', function(req, res) {
-	res.set('Content-Type','application/json');
+	req.set('Content-Type','application/json');
 	console.log("Received req")
 	console.log(req.body);
   	var user = req.body.user;
