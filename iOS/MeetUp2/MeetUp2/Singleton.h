@@ -11,5 +11,6 @@
 @interface Singleton : NSObject
 
 + (Singleton *)sharedInstance;
+- (void) postData;
 
 @end
