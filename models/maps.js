@@ -50,6 +50,8 @@ var model = function() {
 							restaurant.rating_image_url = data.businesses[i].rating_img_url;
 							restaurant.snippet_text = data.businesses[i].snippet_text;
 							restaurant.mobile_url = data.businesses[i].mobile_url;
+							console.log(restaurants[i]);
+
 							restaurants.push(restaurant);
 
 						}

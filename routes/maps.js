@@ -29,7 +29,7 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
   	//var friend = {"latitude":39.7749290,"longitude":-126.4194160};
 
   	map_model.giveRestaurants(user,friend,function(restaurants){
-		  	res.send(restaurants);
+		  res.send(restaurants);
   	});
 
   	//res.send(restaurants.toString());
