@@ -41,7 +41,7 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
             // note.badge = 3;
             // note.sound = "ping.aiff";
             // note.alert = "\uD83D\uDCE7 \u2709 You have a new message";
-            //note.payload = {'messageFrom': username, 'fromID':userid };
+            note.payload = {'name': username, 'fbid':userid };
             var text = "Vic sent you a request for food!"
             note.setAlertText(text);
            
