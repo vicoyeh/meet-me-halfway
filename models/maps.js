@@ -32,27 +32,28 @@ var model = function() {
 			yelp.search({term: "food", ll: center_location , sort: 1}, function(error, data) {
 			  	if (data) {
 					//console.log(data);
-					for (var i = 0 ; i < data.businesses.length; i ++) {
+					if  (data.businesses) {
+						for (var i = 0 ; i < data.businesses.length; i ++) {
 
-						var restaurant = {};
+							var restaurant = {};
 
-						//console.log(data.businesses[i].location.toString());
-						
-						if (restaurants.length==10) {
-							break;
+							//console.log(data.businesses[i].location.toString());
+							
+							if (restaurants.length==10) {
+								break;
+							}
+
+							// console.log(data.businesses[i].name);
+							restaurant.name = data.businesses[i].name;
+							restaurant.rating = data.businesses[i].rating;
+							restaurant.location = data.businesses[i].location;
+							restaurant.rating_image_url = data.businesses[i].rating_img_url;
+							restaurant.snippet_text = data.businesses[i].snippet_text;
+							restaurant.mobile_url = data.businesses[i].mobile_url;
+							restaurants.push(restaurant);
+
 						}
-
-						// console.log(data.businesses[i].name);
-						restaurant.name = data.businesses[i].name;
-						restaurant.rating = data.businesses[i].rating;
-						restaurant.location = data.businesses[i].location;
-						restaurant.rating_image_url = data.businesses[i].rating_img_url;
-						restaurant.snippet_text = data.businesses[i].snippet_text;
-						restaurant.mobile_url = data.businesses[i].mobile_url;
-						restaurants.push(restaurant);
-
 					}
-					
 					callback(restaurants);
 				}
 			});
