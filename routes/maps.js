@@ -8,8 +8,8 @@ var map_model = require('../models/maps')();
 router.post('/', function(req, res) {
 	res.set('Content-Type','application/json');
 	console.log("Received req")
-	console.log(req.body.toString());
-	var data = req.body.toString().slice(4,req.body.toString()-7);
+	// console.log(req.body.toString());
+	var data = JSON.stringify(req.body.toString().slice(4,req.body.toString()-7));
 	console.log(data);
 
   	var user = req.body.user;
