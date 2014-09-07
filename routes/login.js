@@ -6,7 +6,7 @@ var mongoose;
 
 var User = require('../models/user.js');
 
-exports.setMongoose = function(m){
+module.exports.setMongoose = function(m){
 	mongoose = m;
 };
 
