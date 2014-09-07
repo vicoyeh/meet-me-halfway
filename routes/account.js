@@ -6,23 +6,23 @@ var apn = require('apn');
 
 
 router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res) {
-  // res.set('Content-Type','application/json');
-  console.log("Received req: account");
-  // console.log(req.body);
+        // res.set('Content-Type','application/json');
+        console.log("Received req: account");
+        // console.log(req.body);
 
-  // //parse req object
-  // var arr = Object.keys(req.body);
-  // var str = arr[0];
-  // console.log(str);
-  // var data = JSON.parse(str);
-  // console.log(data);
-  // // console.log(data.appleid);
-  // // console.log(data.username);
-  // var appleid = data.appleid;
-  // var username = data.username;
+        // //parse req object
+        // var arr = Object.keys(req.body);
+        // var str = arr[0];
+        // console.log(str);
+        // var data = JSON.parse(str);
+        // console.log(data);
+        // // console.log(data.appleid);
+        // // console.log(data.username);
+        // var appleid = data.appleid;
+        // var username = data.username;
 
-        // var options = {cert:'./cert.pem',key:'./key.pem',  production:false,passphrase:'password' };
-        // var apnConnection = new apn.Connection(options);
+        var options = {cert:'./cert.pem',key:'./key.pem',  production:false,passphrase:'password' };
+        var apnConnection = new apn.Connection(options);
 
 
         //condition checking
