@@ -24,6 +24,8 @@ router.post('/', function(req, res) {
         // // Connect to DB
         mongoose.connect(dbConfig.url);
 
+        console.log("hereddd");
+
         User.find({fbid:userid}, function(err,data) {
         	console.log("here");
             if (err)
