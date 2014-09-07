@@ -15,8 +15,22 @@ var maps = require('./routes/maps');
 //db setup #################################
 var dbConfig = require('./db');
 var mongoose = require('mongoose');
+var User = require('./models/user.js');
 // // Connect to DB
 mongoose.connect(dbConfig.url);
+var ethan = new User({name: 'Ethan'});
+
+console.log(ethan.name);
+// var db = mongoose.connection;
+
+// db.once('open', function callback () {
+//   console.log("connected to database");
+// });
+
+// mongoose.find(function (err, kittens) {
+//   if (err) return console.error(err);
+//   console.log(kittens)
+// })
 
 
 var app = express();
