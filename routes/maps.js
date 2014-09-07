@@ -8,7 +8,8 @@ var map_model = require('../models/maps')();
 router.get('/', function(req, res) {
   	var user = req.body.user;
   	var friend = req.body.friend;
-  	console.log(req.body);
+  	console.log("got request");
+  	console.log(req);
   	console.log(user);
   	console.log(friend);
 
