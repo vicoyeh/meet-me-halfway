@@ -13,7 +13,7 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
 
 	var str = JSON.stringify(req.body);
 	console.log(data);
-	str = str.slice(1,str.length-5);
+	str = str.slice(1,str.length-4);
 	console.log(str);
 	var data = JSON.parse(str);
 
