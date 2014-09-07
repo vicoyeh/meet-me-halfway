@@ -39,7 +39,8 @@ router.post('/', function(req, res) {
 
   	var restaurants = map_model.giveRestaurants(user,friend);
 	
-  	var data={"name":"yo"};
+  	var data="{\"name\":\"yo\"}";
+  	res.set('Content-Type','application/json');
   	res.send(data);
   	//res.send(restaurants.toString());
 });
