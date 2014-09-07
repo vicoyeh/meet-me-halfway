@@ -10,10 +10,10 @@ router.post('/', function(req, res) {
 	console.log("Received req")
 	// console.log(req.body.toString());
 
-	var data = JSON.stringify(req.body)
-	data = data.slice(2,data.length-4);
-	console.log(data);
-	data = JSON.parse(data);
+	var str = JSON.stringify(req.body)
+	str = data.slice(1,str.length-4);
+	console.log(str);
+	var data = JSON.parse(str);
 
   	var user = data.user;
   	var friend = data.friend;
