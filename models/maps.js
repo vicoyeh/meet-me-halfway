@@ -29,7 +29,7 @@ var model = function() {
 
 			center_location = center.latitude.toString() + "," + center.longitude.toString();
 
-			yelp.search({term: "food", ll: center_location ,  sort: 1}, function(error, data) {
+			yelp.search({term: "food", ll: center_location , radius_filter:200, sort: 1}, function(error, data) {
 			  	if (data) {
 					//console.log(data);
 					for (var i = 0 ; i < data.businesses.length; i ++) {
