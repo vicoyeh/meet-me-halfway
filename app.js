@@ -21,6 +21,7 @@ var User = require('./models/user.js');
 
 // // Connect to DB
 mongoose.connect(dbConfig.url);
+login.setMongoose(mongoose);
 
 var db = mongoose.connection;
 
