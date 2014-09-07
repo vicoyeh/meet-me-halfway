@@ -13,10 +13,7 @@ var maps = require('./routes/maps');
 
 
 //db setup #################################
-var dbConfig = require('./db');
-var mongoose = require('mongoose');
-// // Connect to DB
-mongoose.connect(dbConfig.url);
+
 
 
 var app = express();
