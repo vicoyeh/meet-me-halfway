@@ -29,11 +29,21 @@ var model = function() {
 
 			center_location = center.latitude.toString() + "," + center.longitude.toString();
 
-			yelp.search({term: "food", ll: center_location , limit: 5, sort: 1}, function(error, data) {
+			yelp.search({term: "food", ll: center_location ,  sort: 1}, function(error, data) {
 			  	if (data) {
 					//console.log(data);
 					for (var i = 0 ; i < data.businesses.length; i ++) {
+
 						var restaurant = {};
+
+						if (data.businesses[i].location==null) {
+							continue;
+						}
+
+						if (restaurants.length==5) {
+							break;
+						}
+
 						// console.log(data.businesses[i].name);
 						restaurant.name = data.businesses[i].name;
 						restaurant.rating = data.businesses[i].rating;
