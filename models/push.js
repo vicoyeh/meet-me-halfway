@@ -20,6 +20,8 @@ var model = function() {
 			note.alert = "\uD83D\uDCE7 \u2709 You have a new invitation";
 			note.payload = {'messageFrom': "Tom"};
 
+			console.log("HI");
+
 			apnConnection.pushNotification(note, myDevice);
 		}
 	}
