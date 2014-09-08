@@ -1,0 +1,13 @@
+PODS:
+  - ArcGIS-Runtime-SDK-iOS (10.2.3)
+  - Firebase (1.1.12)
+
+DEPENDENCIES:
+  - ArcGIS-Runtime-SDK-iOS
+  - Firebase (>= 1.1.12)
+
+SPEC CHECKSUMS:
+  ArcGIS-Runtime-SDK-iOS: 4f8c8a4992385b225ffd10a6dd2c0151335f437d
+  Firebase: 26ca966dea982f29a4685f7fa8f596d56e5487ad
+
+COCOAPODS: 0.33.1

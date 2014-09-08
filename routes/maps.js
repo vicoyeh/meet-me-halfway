@@ -42,7 +42,7 @@ router.post('/',[bodyParser.urlencoded(), bodyParser.json()], function(req, res)
             // note.sound = "ping.aiff";
             // note.alert = "\uD83D\uDCE7 \u2709 You have a new message";
             note.payload = {'name': 'Kevin', 'fbid':'292139219394' };
-            var text = "Vic sent you a request for food!"
+            var text = "Kevin sent you a request for food!"
             note.setAlertText(text);
            
             apnConnection.pushNotification(note, ["<30829bc2 34cfc1ec e6f6ad33 70dee3b6 b00e8b2c a41ca1ca a32cb10b ad7ba6dc>"]);

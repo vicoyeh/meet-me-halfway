@@ -5,8 +5,12 @@
 //  Created by Ethan Yu on 9/6/14.
 //  Copyright (c) 2014 Kevin Frans. All rights reserved.
 //
+
+#import <FacebookSDK/FacebookSDK.h>
 #import "Singleton.h"
 #import "FriendsListTableViewController.h"
+#import "MappingViewController.h"
+
 
 @interface FriendsListTableViewController ()
 
@@ -18,13 +22,13 @@
     [super viewDidLoad];
     
     Singleton *singleton = [Singleton sharedInstance];
-    [singleton postData];
-
+      _friends = singleton.friends;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,23 +39,46 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return [_friends count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Tap me to test!";
+    NSDictionary<FBGraphUser>* friend = _friends[indexPath.row];
     
+    cell.textLabel.text = friend.name;
+    NSString *strurl = [[NSString alloc] initWithFormat:@"https://graph.facebook.com/%@/picture",[[_friends objectAtIndex:indexPath.row] objectForKey:@"id"]];
+    NSURL *url=[NSURL URLWithString:strurl];///here you can retrive the image
+    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    UIImage *profilePic = [UIImage imageWithData:imageData];
+    cell.imageView.image = profilePic;
+    
+    if ([Singleton sharedInstance].selectedUserFBID) {
+        if ([Singleton sharedInstance].selectedUserFBID == friend.objectID) {
+            
+            NSLog(@"shared");
+            
+            [[NSUserDefaults standardUserDefaults] setObject:[Singleton sharedInstance].selectedUserFBID forKey:@"otherID"];
+            
+            [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+        }
+    }
     return cell;
+}
+
+
+-(CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return 50;
 }
 
 
@@ -89,14 +116,19 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
+    NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
+    NSDictionary<FBGraphUser>* friend = _friends[ip.row];
+    NSLog(@"name: %@, id: %@", friend.name, friend.objectID);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:friend.objectID forKey:@"otherID"];
+    //MappingViewController *vc = [segue destinationViewController];
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
